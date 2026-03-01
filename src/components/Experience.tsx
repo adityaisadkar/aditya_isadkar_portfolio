@@ -4,9 +4,19 @@ import { Briefcase, Calendar } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
+      title: "Full Stack Developer",
+      company: "Webisdom",
+      period: "January 2026 - Present",
+      description: [
+        "Leadership & Project Management: Leading a 5-member team across 5 concurrent projects (managing 2 client projects and spearheading 3 internal ones), effectively translating client requirements into actionable technical workflows.",
+        "Core Development & SEO: Architecting major site functionalities and driving technical SEO optimizations, resulting in enhanced web performance and an estimated 30% increase in search visibility.",
+        "Infrastructure & Deployment: Independently managing cloud infrastructure and end-to-end deployments via AWS EC2, AWS Amplify, and Hostinger, ensuring seamless delivery and 99.9% site uptime.",
+      ],
+    },
+    {
       title: "Tech Intern",
       company: "Webisdom",
-      period: "July 2025 - Present",
+      period: "July 2025 - December 2025",
       description: [
         "Worked on end-to-end website development using WordPress, PHP, and MERN stack",
         "Gained experience in debugging, deployment, and responsiveness across platforms",
@@ -39,8 +49,8 @@ const Experience = () => {
 
         <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-primary before:to-transparent">
           {experiences.map((exp, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="relative p-6 bg-card border-border hover:border-primary transition-all group ml-12 md:ml-0"
             >
               <div className="absolute -left-[3.25rem] md:relative md:left-0 top-6 md:top-0 md:mb-2">
@@ -61,7 +71,7 @@ const Experience = () => {
                   <p className="text-primary font-medium">{exp.company}</p>
                   <p className="text-sm text-muted-foreground md:hidden mt-1">{exp.period}</p>
                 </div>
-                
+
                 <ul className="space-y-2">
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-muted-foreground flex gap-2">
